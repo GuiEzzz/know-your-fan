@@ -28,7 +28,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6">Bem-vindo ao Know Your Fan!</h1>
       <button
         onClick={handleStart}
-        className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800"
+        className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 border border-white/20"
       >
         Começar
       </button>
