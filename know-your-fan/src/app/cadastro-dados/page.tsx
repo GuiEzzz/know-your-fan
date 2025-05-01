@@ -4,13 +4,15 @@ import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
+import { useRouter } from 'next/navigation';
 
 import FloatingInput from '@/components/FloatingInput';
 import ProgressoAtual from '@/components/ProgressoAtual';
 
 export default function CadastroDados() {
   const searchParams = useSearchParams();
-  const userId = searchParams.get('uid');
+  const router = useRouter();
+  const userId = searchParams?.get('uid');
 
   const [step, setStep] = useState(1); // Etapa atual
   const [formData, setFormData] = useState({
@@ -61,12 +63,13 @@ export default function CadastroDados() {
     if (!userId) return alert('ID de usuário não encontrado.');
 
     await updateDoc(doc(db, 'usuarios', userId), formData);
-    alert('Cadastro finalizado com sucesso!');
+    
+    router.push(`/documento?uid=${userId}`);
   };
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4">
-      <ProgressoAtual etapaAtual={step - 1} totalEtapas={2} />
+      <ProgressoAtual etapaAtual={step - 1} totalEtapas={3} />
 
       <h1 className="text-2xl font-bold mb-6">
         {step === 1 ? 'Cadastro de Dados Pessoais' : 'Informações Complementares'}
