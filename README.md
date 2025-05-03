@@ -17,7 +17,7 @@ Este projeto é uma plataforma de cadastro inteligente voltada para jogadores de
 - Next.js  
 - Firebase Firestore  
 - TailwindCSS  
-- OpenAI Models
+- OpenAI LLM
 - OpenAI Embeddings via LangChain  
 - Google Cloud Vision OCR
 - Lucide React Icons  
