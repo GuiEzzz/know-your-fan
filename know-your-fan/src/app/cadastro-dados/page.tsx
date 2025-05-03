@@ -50,6 +50,17 @@ export default function CadastroDados() {
     return null;
   };
 
+  const validarSegundaEtapa = () => {
+    const { atividades, eventos, interesses, compras } = formData;
+
+    if (atividades.trim().length < 3) return 'Atividades muito curto.';
+    if (eventos.trim().length < 3) return 'Eventos muito curto.';
+    if (interesses.trim().length < 3) return 'Interesses muito curto.';
+    if (compras.trim().length < 3) return 'Compras muito curto.';
+
+    return null;
+  };
+
   const handleNext = () => {
     const erro = validarPrimeiraEtapa();
     if (erro) return alert(erro);
@@ -59,6 +70,9 @@ export default function CadastroDados() {
   const handleBack = () => setStep(1);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    const erro = validarSegundaEtapa();
+    if (erro) return alert(erro);
+
     e.preventDefault();
     if (!userId) return alert('ID de usuário não encontrado.');
 
