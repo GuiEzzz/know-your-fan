@@ -69,7 +69,7 @@ export default function CadastroDados() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4">
-      <ProgressoAtual etapaAtual={step - 1} totalEtapas={3} />
+      <ProgressoAtual etapaAtual={step - 1} totalEtapas={5} />
 
       <h1 className="text-2xl font-bold mb-6">
         {step === 1 ? 'Cadastro de Dados Pessoais' : 'Informações Complementares'}
@@ -140,9 +140,9 @@ export default function CadastroDados() {
               </button>
               <button
                 type="submit"
-                className="w-1/2 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+                className="w-1/2 bg-black text-white py-2 rounded hover:bg-gray-800 transition"
               >
-                Finalizar
+                Continuar
               </button>
             </div>
           </>

@@ -25,7 +25,7 @@ Compare com os dados informados:
 - Nome: "${nomeInformado}"
 - CPF: "${cpfInformado}"
 
-Responda se os dados batem com o documento ("Válido" ou "Negado"). Apenas com essas palavras mencionadas.
+Responda se os dados batem com o documento ("Válido, estamos te redirecionando..."), apenas com essas palavras mencionadas. Caso seja negativo, de uma resposta simples do porquê foi negado.
 `;
 
     const resposta = await openai.chat.completions.create({
