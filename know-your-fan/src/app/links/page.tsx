@@ -46,14 +46,14 @@ export default function LinksEsportsPage() {
       }
     });
     setCarregando(false);
-    alert('Cadastro finalizado com sucesso!');
-    // Você pode redirecionar para uma tela de sucesso aqui, se quiser
+
+    router.push(`/dashboard?uid=${userId}`);
   };
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4">
       <div className="w-full max-w-md">
-        <ProgressoAtual etapaAtual={5} totalEtapas={5} />
+        <ProgressoAtual etapaAtual={5} totalEtapas={6} />
 
         <h1 className="text-2xl font-bold mb-6 text-center">Links de eSports</h1>
 
