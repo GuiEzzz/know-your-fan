@@ -21,6 +21,7 @@ Este projeto é uma plataforma de cadastro inteligente voltada para jogadores de
 - OpenAI Embeddings via LangChain  
 - Google Cloud Vision OCR
 - Lucide React Icons  
+- Vercel
 
 ---
 
@@ -42,6 +43,8 @@ Este projeto é uma plataforma de cadastro inteligente voltada para jogadores de
    Crie um arquivo `.env.local` com as seguintes chaves:
 
    ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=...
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
    NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=...
    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
