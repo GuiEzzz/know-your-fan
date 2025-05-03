@@ -1,4 +1,4 @@
-# Plataforma de Cadastro e Recomendação Gamer
+# Know-your-fan
 
 Este projeto é uma plataforma de cadastro inteligente voltada para jogadores de eSports. O sistema permite o envio e validação de documentos via OCR e IA, coleta dados pessoais, redes sociais e links de plataformas gamers, e recomenda sites com base no perfil do usuário.
 
