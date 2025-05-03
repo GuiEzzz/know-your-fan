@@ -59,6 +59,7 @@ export default function DashboardFinal() {
   const searchParams = useSearchParams();
   const uid = searchParams?.get('uid');
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [dadosUsuario, setDadosUsuario] = useState<any>(null);
   const [loadingUser, setLoadingUser] = useState(true);
   const [recomendacoes, setRecomendacoes] = useState<string[]>([]);

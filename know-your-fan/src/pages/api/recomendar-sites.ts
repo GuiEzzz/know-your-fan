@@ -66,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       recomendacoes: maisRelevantes.join('\n\n')
     });
 
-  } catch (erro: any) {
+  } catch (erro: unknown) {
     console.error('Erro ao gerar recomendações:', erro);
     res.status(500).json({ error: 'Erro ao gerar recomendações' });
   }
