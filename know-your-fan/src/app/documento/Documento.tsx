@@ -96,7 +96,7 @@ export default function DocumentoPage() {
           Upload de Documento
         </h1>
 
-        <p className='text-md mb-6 text-center'>O documento deve conter seu nome completo e CPF.</p>
+        <p className='text-md mb-6 text-center'>Envie um documento com nome completo e CPF nos formatos JPG ou PNG.</p>
 
         <form onSubmit={handleSubmit} className="w-full space-y-4">
           <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center relative">
