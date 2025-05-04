@@ -18,8 +18,11 @@ type Plataforma = {
 
 type DadosUsuario = {
   nome: string;
-  idade: number;
+  aniversario: string;
   interesses?: string[];
+  atividades?: string;
+  eventos?: string;
+  compras?: string;
   redesSociais?: { [key: string]: string };
   linksEsports?: string[];
 };
@@ -38,8 +41,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const textoUsuario = `
       Nome: ${dadosUsuario.nome}
-      Idade: ${dadosUsuario.idade}
+      Aniversário: ${dadosUsuario.aniversario}
       Interesses: ${dadosUsuario.interesses || 'Nenhum'}
+      Atividades: ${dadosUsuario.atividades || 'Nenhum'}
+      Eventos: ${dadosUsuario.eventos || 'Nenhum'}
+      Compras: ${dadosUsuario.compras || 'Nenhum'}
       Redes sociais: ${Object.values(dadosUsuario.redesSociais || {}).join(', ')}
       Links de eSports: ${dadosUsuario.linksEsports || 'Nenhum'}
 
